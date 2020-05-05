@@ -1,0 +1,13 @@
+C:\Users\Henrique\projects\dotnet\Eleva\src\Eleva.Domain\bin\Debug\netcoreapp3.1\Eleva.Domain.exe
+C:\Users\Henrique\projects\dotnet\Eleva\src\Eleva.Domain\bin\Debug\netcoreapp3.1\Eleva.Domain.deps.json
+C:\Users\Henrique\projects\dotnet\Eleva\src\Eleva.Domain\bin\Debug\netcoreapp3.1\Eleva.Domain.runtimeconfig.json
+C:\Users\Henrique\projects\dotnet\Eleva\src\Eleva.Domain\bin\Debug\netcoreapp3.1\Eleva.Domain.runtimeconfig.dev.json
+C:\Users\Henrique\projects\dotnet\Eleva\src\Eleva.Domain\bin\Debug\netcoreapp3.1\Eleva.Domain.dll
+C:\Users\Henrique\projects\dotnet\Eleva\src\Eleva.Domain\bin\Debug\netcoreapp3.1\Eleva.Domain.pdb
+C:\Users\Henrique\projects\dotnet\Eleva\src\Eleva.Domain\obj\Debug\netcoreapp3.1\Eleva.Domain.csprojAssemblyReference.cache
+C:\Users\Henrique\projects\dotnet\Eleva\src\Eleva.Domain\obj\Debug\netcoreapp3.1\Eleva.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Henrique\projects\dotnet\Eleva\src\Eleva.Domain\obj\Debug\netcoreapp3.1\Eleva.Domain.AssemblyInfoInputs.cache
+C:\Users\Henrique\projects\dotnet\Eleva\src\Eleva.Domain\obj\Debug\netcoreapp3.1\Eleva.Domain.AssemblyInfo.cs
+C:\Users\Henrique\projects\dotnet\Eleva\src\Eleva.Domain\obj\Debug\netcoreapp3.1\Eleva.Domain.dll
+C:\Users\Henrique\projects\dotnet\Eleva\src\Eleva.Domain\obj\Debug\netcoreapp3.1\Eleva.Domain.pdb
+C:\Users\Henrique\projects\dotnet\Eleva\src\Eleva.Domain\obj\Debug\netcoreapp3.1\Eleva.Domain.genruntimeconfig.cache
