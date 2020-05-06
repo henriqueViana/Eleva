@@ -9,7 +9,10 @@ namespace Eleva.Domain.Interfaces
     public interface ISchoolService
     {
         Task<IEnumerable<SchoolDTO>> GetAll();
-        SchoolDTO GetById(Guid id);
-       
+        Task<SchoolDTO> GetById(Guid id);
+        Task<bool> Create(SchoolDTO schoolDTO); 
+        Task<bool> Update(SchoolDTO schoolDTO);
+        Task<bool> Destroy(Guid id);
+
     }
 }

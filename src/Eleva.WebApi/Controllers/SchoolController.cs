@@ -25,5 +25,55 @@ namespace Eleva.WebApi.Controllers
         {
             return await _schoolService.GetAll();
         }
+
+        [HttpGet("{id:guid}")]
+        public async Task<ActionResult<SchoolDTO>> GetById(Guid id)
+        {
+            var school = await _schoolService.GetById(id);
+
+            if (school == null) return NotFound();
+
+            return Ok(school);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<SchoolDTO>> Create(SchoolDTO schoolDTO)
+        {
+            if (!ModelState.IsValid) return BadRequest();
+
+            var result = await _schoolService.Create(schoolDTO);
+
+            if (!result) return BadRequest();
+
+            return Ok(schoolDTO);
+        }
+
+        [HttpPut("{id:guid}")]
+        public async Task<ActionResult<SchoolDTO>> Update(Guid id, SchoolDTO schoolDTO)
+        {
+            if (schoolDTO.Id != id) return BadRequest();
+
+            if (!ModelState.IsValid) return BadRequest();
+
+            var result = await _schoolService.Update(schoolDTO);
+
+            if (!result) return BadRequest();
+
+            return Ok(schoolDTO);
+        }
+
+        [HttpDelete("{id:guid}")]
+        public async Task<ActionResult<SchoolDTO>> Destroy(Guid id)
+        {
+            var school = await this.GetById(id);
+
+            if (school == null) return NotFound();
+
+            var result = await _schoolService.Destroy(id);
+
+            if (!result) return BadRequest();
+
+            return Ok(school);
+        }
     }
 }

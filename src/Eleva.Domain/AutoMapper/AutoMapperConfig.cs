@@ -11,8 +11,8 @@ namespace Eleva.Application.AutoMapper
     {
         public AutoMapperConfig()
         {
-            CreateMap<School, SchoolDTO>().ReverseMap();
-            CreateMap<Address, AddressDTO>().ReverseMap();
+            CreateMap<School, SchoolDTO>();
+            CreateMap<Address, AddressDTO>();
 
             CreateMap<StudentClassDTO, StudentClass>();
             CreateMap<StudentClass, StudentClassDTO>()

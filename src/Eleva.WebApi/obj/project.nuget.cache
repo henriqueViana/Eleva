@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "1OPRbhvjEhmeAVrFbRiioof4iS/Vp++V4YPiy4WD6Bl9MQjiQvbtIfpgOYwNrrx6djJmMDi/aTbZk64gi5wxng==",
+  "dgSpecHash": "qKuJfiWsXG/Mg4bVulq9J2KHotrnW7lXskMA0tjPrA66FKKtPJGrn7mRnVv4T9fP9J7mE0U7IgmTE15nsW7NBw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Henrique\\projects\\dotnet\\Eleva\\src\\Eleva.WebApi\\Eleva.WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Henrique\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\Henrique\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\Henrique\\.nuget\\packages\\fluentvalidation\\8.6.2\\fluentvalidation.8.6.2.nupkg.sha512",
     "C:\\Users\\Henrique\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Henrique\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\Henrique\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",

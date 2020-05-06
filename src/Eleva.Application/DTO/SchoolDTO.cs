@@ -11,14 +11,15 @@ namespace Eleva.Application.DTO
         public Guid Id { get; set; }
 
         [Required(ErrorMessage = "O campo nome é obrigatório")]
-        [Range(3, 100, ErrorMessage = "O campo nome deve ter entre 3 e 100 caracteres")]
+        [MinLength(3, ErrorMessage = "O campo nome deve ter no mínimo 3 caracteres")]
+        [MaxLength(100, ErrorMessage = "O campo nome deve ter no máximo 100 caracteres")]
         public string Name { get; set; }
 
         [Required(ErrorMessage = "O campo documento é obrigatório")]
-        [Range(3, 100, ErrorMessage = "O campo nome deve ter entre 3 e 100 caracteres")]
+        [MinLength(11, ErrorMessage = "O campo documento deve ter no mínimo 11 caracteres")]
+        [MaxLength(14, ErrorMessage = "O campo documento deve ter no máximo 14 caracteres")]
         public string Document { get; set; }
 
-        [Required(ErrorMessage = "Os dados de endereço são obrigatórios")]
         public AddressDTO Address { get; set; }
 
         public IEnumerable<StudentClassDTO> StudentClasses { get; set; }

@@ -11,7 +11,8 @@ namespace Eleva.Application.DTO
         public Guid Id { get; set; }
 
         [Required(ErrorMessage = "O campo endereço é obrigatório")]
-        [Range(3, 100, ErrorMessage = "O campo endereço deve ter entre 3 e 100 caracteres")]
+        [MinLength(3, ErrorMessage = "O campo endereço deve ter no mínimo 3 caracteres")]
+        [MaxLength(100, ErrorMessage = "O campo endereço deve ter no máximo 100 caracteres")]
         public string PublicPlace { get; set; }
 
         public string Complement { get; set; }
@@ -22,20 +23,24 @@ namespace Eleva.Application.DTO
         public string Number { get; set; }
 
         [Required(ErrorMessage = "O campo cep é obrigatório")]
-        [Range(8, 8, ErrorMessage = "O campo cep deve conter 8 números")]
+        [MinLength(8, ErrorMessage = "O campo cep deve conter 8 caracteres")]
+        [MaxLength(8, ErrorMessage = "O campo cep deve conter 8 caracteres")]
         [RegularExpression("^[0-9]*$", ErrorMessage = "O campo cep só aceita valores numéricos")]
         public string Zipcode { get; set; }
 
         [Required(ErrorMessage = "O campo bairro é obrigatório")]
-        [Range(3, 100, ErrorMessage = "O campo bairro deve ter entre 3 e 100 caracteres")]
+        [MinLength(3, ErrorMessage = "O campo bairro deve ter no mínimo 3 caracteres")]
+        [MaxLength(100, ErrorMessage = "O campo bairro deve ter no máximo 100 caracteres")]
         public string Neighborhood { get; set; }
 
         [Required(ErrorMessage = "O campo cidade é obrigatório")]
-        [Range(3, 100, ErrorMessage = "O campo cidade deve ter entre 3 e 100 caracteres")]
+        [MinLength(3, ErrorMessage = "O campo cidade deve ter no mínimo 3 caracteres")]
+        [MaxLength(100, ErrorMessage = "O campo cidade deve ter no máximo 100 caracteres")]
         public string City { get; set; }
 
         [Required(ErrorMessage = "O campo estado é obrigatório")]
-        [Range(2, 100, ErrorMessage = "O campo estado deve ter entre 2 e 100 caracteres")]
+        [MinLength(2, ErrorMessage = "O campo estado deve ter no mínimo 3 caracteres")]
+        [MaxLength(100, ErrorMessage = "O campo estado deve ter no máximo 100 caracteres")]
         public string State { get; set; }
 
         public Guid SchoolId { get; set; }

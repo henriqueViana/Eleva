@@ -31,9 +31,9 @@ namespace Eleva.WebApi
         {
             services.AddDbContextConfig(Configuration);
 
-            services.AddControllers();
+            services.AddAutoMapper(typeof(Startup));
 
-            services.AddAutoMapperConfig();
+            services.AddControllers();
 
             services.AddDependencyInjectionConfig();
         }
