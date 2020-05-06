@@ -47,3 +47,8 @@ C:\Users\Henrique\projects\dotnet\Eleva\src\Eleva.Data\obj\Debug\netcoreapp3.1\E
 C:\Users\Henrique\projects\dotnet\Eleva\src\Eleva.Data\obj\Debug\netcoreapp3.1\Eleva.Data.dll
 C:\Users\Henrique\projects\dotnet\Eleva\src\Eleva.Data\obj\Debug\netcoreapp3.1\Eleva.Data.pdb
 C:\Users\Henrique\projects\dotnet\Eleva\src\Eleva.Data\obj\Debug\netcoreapp3.1\Eleva.Data.genruntimeconfig.cache
+C:\Users\Henrique\projects\dotnet\Eleva\src\Eleva.Data\bin\Debug\netcoreapp3.1\Eleva.Application.exe
+C:\Users\Henrique\projects\dotnet\Eleva\src\Eleva.Data\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\Henrique\projects\dotnet\Eleva\src\Eleva.Data\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Henrique\projects\dotnet\Eleva\src\Eleva.Data\bin\Debug\netcoreapp3.1\Eleva.Application.dll
+C:\Users\Henrique\projects\dotnet\Eleva\src\Eleva.Data\bin\Debug\netcoreapp3.1\Eleva.Application.pdb

@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "zDSRICIfmaMA0+KD6dzvC+Osl/h0+BUTcBqdbMCvRtbhBomiWRyHIpGViag4TyIBI8Ya8h3TOTGuWvhdCC9ovw==",
+  "dgSpecHash": "7X5NTK44T+qbL+pS6YFYx29J/ZF2LGzHsZJnT8kL76MZJLx2L4+Dc5p8jEz56jKbsuyYuhyBzMlQyDmKuwXFcQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Henrique\\projects\\dotnet\\Eleva\\src\\Eleva.Data\\Eleva.Data.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Henrique\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
+    "C:\\Users\\Henrique\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\Henrique\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\Henrique\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\Henrique\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

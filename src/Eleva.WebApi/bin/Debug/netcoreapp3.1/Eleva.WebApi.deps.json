@@ -2148,8 +2148,7 @@
       },
       "Eleva.Application/1.0.0": {
         "dependencies": {
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
-          "Eleva.Domain": "1.0.0"
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0"
         },
         "runtime": {
           "Eleva.Application.dll": {}
@@ -2172,6 +2171,9 @@
         }
       },
       "Eleva.Domain/1.0.0": {
+        "dependencies": {
+          "Eleva.Application": "1.0.0"
+        },
         "runtime": {
           "Eleva.Domain.dll": {}
         },

@@ -8,8 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "Eleva.Application/1.0.0": {
         "dependencies": {
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
-          "Eleva.Domain": "1.0.0"
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0"
         },
         "runtime": {
           "Eleva.Application.dll": {}
@@ -109,11 +108,6 @@
           "Microsoft.NETCore.Platforms": "1.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
-        }
-      },
-      "Eleva.Domain/1.0.0": {
-        "runtime": {
-          "Eleva.Domain.dll": {}
         }
       }
     }
@@ -221,11 +215,6 @@
       "sha512": "sha512-LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
-    },
-    "Eleva.Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

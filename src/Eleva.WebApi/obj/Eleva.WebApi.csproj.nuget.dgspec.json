@@ -26,11 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {
-              "C:\\Users\\Henrique\\projects\\dotnet\\Eleva\\src\\Eleva.Domain\\Eleva.Domain.csproj": {
-                "projectPath": "C:\\Users\\Henrique\\projects\\dotnet\\Eleva\\src\\Eleva.Domain\\Eleva.Domain.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -160,7 +156,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Henrique\\projects\\dotnet\\Eleva\\src\\Eleva.Application\\Eleva.Application.csproj": {
+                "projectPath": "C:\\Users\\Henrique\\projects\\dotnet\\Eleva\\src\\Eleva.Application\\Eleva.Application.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

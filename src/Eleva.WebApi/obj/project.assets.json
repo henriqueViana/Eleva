@@ -2540,8 +2540,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
-          "Eleva.Domain": "1.0.0"
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0"
         },
         "compile": {
           "bin/placeholder/Eleva.Application.dll": {}
@@ -2568,6 +2567,9 @@
       "Eleva.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Eleva.Application": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Eleva.Domain.dll": {}
         },
