@@ -1,4 +1,5 @@
 ﻿using Eleva.Application.DTO;
+using Eleva.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,10 +9,10 @@ namespace Eleva.Domain.Interfaces
 {
     public interface IStudentClassService
     {
-        Task<IEnumerable<StudentClassDTO>> GetAll();
-        Task<StudentClassDTO> GetById(Guid id);
-        Task<bool> Create(StudentClassDTO schoolDTO);
-        Task<bool> Update(StudentClassDTO schoolDTO);
+        Task<IEnumerable<StudentClass>> GetAll();
+        Task<StudentClass> GetById(Guid id);
+        Task<bool> Create(StudentClass school);
+        Task<bool> Update(StudentClass school);
         Task<bool> Destroy(Guid id);
     }
 }

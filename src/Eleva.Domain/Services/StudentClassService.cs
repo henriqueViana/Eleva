@@ -21,31 +21,21 @@ namespace Eleva.Domain.Services
             _studentClassRepository = studentClassRepository;
         }
 
-        public async Task<IEnumerable<StudentClassDTO>> GetAll()
+        public async Task<IEnumerable<StudentClass>> GetAll()
         {
-            var st = await _studentClassRepository.GetAll();
-            if (st == null)
-            {
-
-            }
-
-            var mp = _mapper.Map<IEnumerable<StudentClassDTO>>(await _studentClassRepository.GetAll());
-            if (mp == null)
-            {
-
-            }
-
-            return _mapper.Map<IEnumerable<StudentClassDTO>>(await _studentClassRepository.GetAll());
+            // return _mapper.Map<IEnumerable<StudentClassDTO>>(await _studentClassRepository.GetAll());
+            return await _studentClassRepository.GetAll();
         }
 
-        public async Task<StudentClassDTO> GetById(Guid id)
+        public async Task<StudentClass> GetById(Guid id)
         {
-            return _mapper.Map<StudentClassDTO>(await _studentClassRepository.GetById(id));
+            // return _mapper.Map<StudentClassDTO>(await _studentClassRepository.GetById(id));
+            return await _studentClassRepository.GetById(id);
         }
 
-        public async Task<bool> Create(StudentClassDTO studentClassDTO)
+        public async Task<bool> Create(StudentClass studentClass)
         {
-            var studentClass = _mapper.Map<StudentClass>(studentClassDTO);
+            //var studentClass = _mapper.Map<StudentClass>(studentClassDTO);
 
             var studentClassIsValid = Validade(new StudentClassValidation(), studentClass);
 
@@ -55,9 +45,9 @@ namespace Eleva.Domain.Services
             return true;
         }
 
-        public async Task<bool> Update(StudentClassDTO studentClassDTO)
+        public async Task<bool> Update(StudentClass studentClass)
         {
-            var studentClass = _mapper.Map<StudentClass>(studentClassDTO);
+            // var studentClass = _mapper.Map<StudentClass>(studentClassDTO);
 
             var studentClassIsValid = Validade(new StudentClassValidation(), studentClass);
 
@@ -69,10 +59,6 @@ namespace Eleva.Domain.Services
 
         public async Task<bool> Destroy(Guid id)
         {
-            var studentClass = await _studentClassRepository.GetById(id);
-
-            if (studentClass == null) return false;
-
             await _studentClassRepository.Destroy(id);
             return true;
         }
