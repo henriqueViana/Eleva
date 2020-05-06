@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Eleva.Domain.Interfaces
 {
-    interface IStudentClassService
+    public interface IStudentClassService
     {
         Task<IEnumerable<StudentClassDTO>> GetAll();
         Task<StudentClassDTO> GetById(Guid id);

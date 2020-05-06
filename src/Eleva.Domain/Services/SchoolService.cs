@@ -24,32 +24,35 @@ namespace Eleva.Domain.Services
             _addressRepository = addressRepository;
         }
 
-        public async Task<IEnumerable<SchoolDTO>> GetAll()
+        public async Task<IEnumerable<School>> GetAll()
         {
-            return _mapper.Map<IEnumerable<SchoolDTO>>(await _schoolRepository.GetAll());
+            // return _mapper.Map<IEnumerable<SchoolDTO>>(await _schoolRepository.GetAll());
+            return await _schoolRepository.GetAll();
         }
 
-        public async Task<SchoolDTO> GetById(Guid id)
+        public async Task<School> GetById(Guid id)
         {
-            return _mapper.Map<SchoolDTO>(await _schoolRepository.GetSchoolAndAddressAndStudentClass(id));
+            //return _mapper.Map<SchoolDTO>(await _schoolRepository.GetSchoolAndAddressAndStudentClass(id));
+            return await _schoolRepository.GetSchoolAndAddressAndStudentClass(id);
         }
 
-        public async Task<bool> Create(SchoolDTO schoolDTO)
+        public async Task<bool> Create(School school)
         {
-            var school = _mapper.Map<School>(schoolDTO);
+            //var school = _mapper.Map<School>(schoolDTO);
 
             var schoolIsValid = Validade(new SchoolValidation(), school);
             var addressIsValid = Validade(new AddressValidation(), school.Address);
 
-            if (!schoolIsValid || addressIsValid) return false;
+            if (!schoolIsValid || !addressIsValid) return false;
 
             await _schoolRepository.Create(school);
             return true;
         }
 
-        public async Task<bool> Update(SchoolDTO schoolDTO)
+        public async Task<bool> Update(School school)
         {
-            var school = _mapper.Map<School>(schoolDTO);
+            // var school = _mapper.Map<School>(schoolDTO);
+
             var schoolIsValid = Validade(new SchoolValidation(), school);
 
             if (!schoolIsValid) return false;
@@ -61,13 +64,13 @@ namespace Eleva.Domain.Services
         public async Task<bool> Destroy(Guid id)
         {
             // verificar se tem turmas relacionadas
-
+            
             var address = await _addressRepository.GetAddressBySchoolId(id);
 
             if (address != null)
             {
-                await _addressRepository.Destroy(id);
-            } 
+                await _addressRepository.Destroy(address.Id);
+            }
 
             await _schoolRepository.Destroy(id);
             return true;

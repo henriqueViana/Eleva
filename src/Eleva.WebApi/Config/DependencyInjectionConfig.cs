@@ -20,6 +20,11 @@ namespace Eleva.WebApi.Config
             services.AddScoped<ISchoolRepository, SchoolRepository>();
             services.AddScoped<ISchoolService, SchoolService>();
 
+            services.AddScoped<IAddressRepository, AddressRepository>();
+            
+            services.AddScoped<IStudentClassRepository, StudentClassRepository>();
+            services.AddScoped<IStudentClassService, StudentClassService>();
+
             return services;
 
         }

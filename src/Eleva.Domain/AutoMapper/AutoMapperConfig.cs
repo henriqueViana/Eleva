@@ -7,16 +7,18 @@ using Eleva.Domain.Models;
 
 namespace Eleva.Application.AutoMapper
 {
-    public class AutoMapperConfig : Profile
+    public class AutomapperConfig : Profile
     {
-        public AutoMapperConfig()
+        public AutomapperConfig()
         {
             CreateMap<School, SchoolDTO>();
-            CreateMap<Address, AddressDTO>();
+            CreateMap<SchoolDTO, School>();
+            CreateMap<Address, AddressDTO>().ReverseMap();
 
             CreateMap<StudentClassDTO, StudentClass>();
             CreateMap<StudentClass, StudentClassDTO>()
                 .ForMember(dest => dest.SchoolName, option => option.MapFrom(src => src.School.Name));
         }
+
     }
 }

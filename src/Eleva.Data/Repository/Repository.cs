@@ -22,7 +22,9 @@ namespace Eleva.Data.Repository
 
         public virtual async Task<List<TEntity>> GetAll()
         {
-            return await _dbSet.ToListAsync();
+            var a = await _dbSet.ToListAsync();
+            
+            return a;
         }
 
         public virtual async Task<TEntity> GetById(Guid id)

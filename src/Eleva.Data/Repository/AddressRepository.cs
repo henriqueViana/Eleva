@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Eleva.Data.Repository
 {
-    class AddressRepository : Repository<Address>, IAddressRepository
+    public class AddressRepository : Repository<Address>, IAddressRepository
     {
         public AddressRepository(ElevaDbContext context) : base(context) { }
 

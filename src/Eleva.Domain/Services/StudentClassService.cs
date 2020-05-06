@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Eleva.Domain.Services
 {
-    class StudentClassService : Service, IStudentClassService 
+    public class StudentClassService : Service, IStudentClassService 
     {
         private readonly IMapper _mapper;
         private readonly IStudentClassRepository _studentClassRepository;
@@ -23,6 +23,18 @@ namespace Eleva.Domain.Services
 
         public async Task<IEnumerable<StudentClassDTO>> GetAll()
         {
+            var st = await _studentClassRepository.GetAll();
+            if (st == null)
+            {
+
+            }
+
+            var mp = _mapper.Map<IEnumerable<StudentClassDTO>>(await _studentClassRepository.GetAll());
+            if (mp == null)
+            {
+
+            }
+
             return _mapper.Map<IEnumerable<StudentClassDTO>>(await _studentClassRepository.GetAll());
         }
 

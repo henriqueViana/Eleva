@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Eleva.Application.DTO;
 using Eleva.Domain.Interfaces;
+using Eleva.Domain.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,13 +23,13 @@ namespace Eleva.WebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<SchoolDTO>> GetAll()
+        public async Task<ActionResult<IEnumerable<School>>> GetAll()
         {
-            return await _schoolService.GetAll();
+            return Ok(await _schoolService.GetAll());
         }
 
         [HttpGet("{id:guid}")]
-        public async Task<ActionResult<SchoolDTO>> GetById(Guid id)
+        public async Task<ActionResult<School>> GetById(Guid id)
         {
             var school = await _schoolService.GetById(id);
 
@@ -37,33 +39,33 @@ namespace Eleva.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<SchoolDTO>> Create(SchoolDTO schoolDTO)
+        public async Task<ActionResult<School>> Create(School school)
         {
             if (!ModelState.IsValid) return BadRequest();
 
-            var result = await _schoolService.Create(schoolDTO);
+            var result = await _schoolService.Create(school);
 
             if (!result) return BadRequest();
 
-            return Ok(schoolDTO);
+            return Ok(school);
         }
 
         [HttpPut("{id:guid}")]
-        public async Task<ActionResult<SchoolDTO>> Update(Guid id, SchoolDTO schoolDTO)
+        public async Task<ActionResult<School>> Update(Guid id, School school)
         {
-            if (schoolDTO.Id != id) return BadRequest();
+            if (school.Id != id) return BadRequest();
 
             if (!ModelState.IsValid) return BadRequest();
 
-            var result = await _schoolService.Update(schoolDTO);
+            var result = await _schoolService.Update(school);
 
             if (!result) return BadRequest();
 
-            return Ok(schoolDTO);
+            return Ok(school);
         }
 
         [HttpDelete("{id:guid}")]
-        public async Task<ActionResult<SchoolDTO>> Destroy(Guid id)
+        public async Task<ActionResult<School>> Destroy(Guid id)
         {
             var school = await this.GetById(id);
 
