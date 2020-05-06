@@ -2,12 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Eleva.Domain.Interfaces
 {
     public interface ISchoolService
     {
-        IEnumerable<SchoolDTO> GetAll();
+        Task<IEnumerable<SchoolDTO>> GetAll();
         SchoolDTO GetById(Guid id);
        
     }

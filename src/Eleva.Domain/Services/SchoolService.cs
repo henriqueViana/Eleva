@@ -19,9 +19,9 @@ namespace Eleva.Domain.Services
             _schoolRepository = schoolRepository;
         }
 
-        public IEnumerable<SchoolDTO> GetAll()
+        public async Task<IEnumerable<SchoolDTO>> GetAll()
         {
-            return _mapper.Map<IEnumerable<SchoolDTO>>(_schoolRepository.GetAll()); 
+            return _mapper.Map<IEnumerable<SchoolDTO>>(await _schoolRepository.GetAll()); 
         }
 
         public SchoolDTO GetById(Guid id)

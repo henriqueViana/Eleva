@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using Eleva.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
+using Eleva.WebApi.Config;
 
 namespace Eleva.WebApi
 {
@@ -28,14 +29,13 @@ namespace Eleva.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ElevaDbContext>(options =>
-            {
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
-            });
+            services.AddDbContextConfig(Configuration);
 
             services.AddControllers();
 
-            services.AddAutoMapper(typeof(Startup));
+            services.AddAutoMapperConfig();
+
+            services.AddDependencyInjectionConfig();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
