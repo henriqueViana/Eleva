@@ -14,6 +14,7 @@ using Eleva.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using Eleva.WebApi.Config;
+using Microsoft.OpenApi.Models;
 
 namespace Eleva.WebApi
 {
@@ -37,6 +38,15 @@ namespace Eleva.WebApi
 
             services.AddDependencyInjectionConfig();
 
+            services.WebApiConfig();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", 
+                    new OpenApiInfo { Title = "Eleva API", Version = "v1", Description = "Primeira versão Eleva API" }
+                );
+            });
+
             services.AddControllers().AddNewtonsoftJson(options =>
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
             );
@@ -52,14 +62,25 @@ namespace Eleva.WebApi
 
             app.UseHttpsRedirection();
 
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Eleva API v1");
+            });
+
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors("Development");
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+
+           
         }
     }
 }

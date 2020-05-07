@@ -11,7 +11,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Eleva.WebApi.Controllers
 {
-    [Route("api/escolas")]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/escolas")]
     [ApiController]
     public class SchoolController : ControllerBase
     {

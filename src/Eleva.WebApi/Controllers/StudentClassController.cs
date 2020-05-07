@@ -10,7 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Eleva.WebApi.Controllers
 {
-    [Route("api/turmas")]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/turmas")]
     [ApiController]
     public class StudentClassController : ControllerBase
     {
